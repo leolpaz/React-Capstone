@@ -1,12 +1,9 @@
 import React from 'react';
 
-const Nav = () => {
-
-  return (
-    <>
-    I'm a Nav
-    </>
-  )
-}
+const Nav = () => (
+  <>
+    A Nav
+  </>
+);
 
 export default Nav;

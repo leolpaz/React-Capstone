@@ -1,13 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Details = (props) => {
-  const { coin } = props
-  console.log(coin)
+  const { coin } = props;
   return (
     <div>
-    {coin}
+      {coin}
     </div>
-  )
-}
+  );
+};
+
+Details.propTypes = {
+  coin: PropTypes.string.isRequired,
+};
 
 export default Details;
