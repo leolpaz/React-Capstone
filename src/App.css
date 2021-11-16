@@ -14,6 +14,12 @@
   background-color: rgb(177, 43, 94);
 }
 
+.home-item,
+.coin {
+  max-height: 200px;
+  min-height: 150px;
+}
+
 .coin {
   margin: 0;
   padding-right: 2%;
@@ -22,7 +28,6 @@
 .home-cont {
   height: calc(100vh - 24px);
 }
-
 
 .coin:nth-child(4n-1),
 .coin:nth-child(4n-2) {
@@ -42,25 +47,16 @@
 }
 
 .input,
-.input:focus {
-  border: none;
-  outline: none;
-  max-width: 900px;
-}
-
-.input {
+.input::placeholder {
+  color: white;
   margin: auto;
 }
 
 .input,
-.input::placeholder {
-  color: white;
-}
-
-.home-item,
-.coin {
-  max-height: 200px;
-  min-height: 150px;
+.input:focus {
+  border: none;
+  outline: none;
+  max-width: 900px;
 }
 
 .home-item img {

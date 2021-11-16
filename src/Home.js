@@ -12,7 +12,6 @@ const Home = (props) => {
   const { list } = props;
   const baseList = useSelector((state) => state.coinsReducer.initialList);
   const coinList = useSelector((state) => state.coinsReducer.filteredList);
-  console.log(coinList)
   const dispatch = useDispatch();
   useEffect(() => {
     if (coinList.length === 0) {
@@ -23,22 +22,21 @@ const Home = (props) => {
   }, []);
 
   const filterItems = (e) => {
-      let displayList = baseList.filter((el) => {
+    const displayList = baseList.filter((el) => {
       const toFilter = el.name.toLowerCase();
-      const regex = new RegExp(e.target.value)
+      const regex = new RegExp(e.target.value);
       if (toFilter.match(regex) !== null) {
-        return el
+        return true;
       }
-    })
-    console.log(baseList)
-    dispatch(filterList(displayList))
-};
+      return false;
+    });
+    dispatch(filterList(displayList));
+  };
   return (
     <div className="home-cont">
       <input onChange={filterItems} className="w-100 input" type="text" name="" id="" placeholder="Type here to filter" />
       <div className="grid">
-        {coinList.map((el) =>{console.log(el) 
-        return(
+        {coinList.map((el) => (
           <Link key={el.name + el.symbol} className="coin" to={`/${el.symbol}`}>
             <div className="h-100 d-flex flex-column justify-content-center align-items-end home-item">
               <AiOutlineArrowRight />
@@ -52,7 +50,7 @@ const Home = (props) => {
               </span>
             </div>
           </Link>
-        )})}
+        ))}
       </div>
     </div>
   );
