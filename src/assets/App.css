@@ -50,10 +50,6 @@
   background-color: rgb(236, 76, 138);
 }
 
-.pink-color {
-  color: rgb(236, 76, 138);
-}
-
 .input,
 .input::placeholder {
   color: white;
