@@ -1,10 +1,9 @@
 .nav,
 .home-cont,
-.det-container
-{
+.det-container {
   width: 100vw;
   max-width: 900px;
-  margin: auto
+  margin: auto;
 }
 
 .grid {
@@ -20,19 +19,18 @@
 }
 
 .coin:nth-child(4n-1),
-.coin:nth-child(4n-2)
-{
-  background-color: rgb(214,69,126);
+.coin:nth-child(4n-2) {
+  background-color: rgb(214, 69, 126);
 }
+
 .coin:nth-child(1),
 .coin:nth-child(4n-3),
-.coin:nth-child(4n-4)
- {
+.coin:nth-child(4n-4) {
   background-color: rgb(177, 43, 94);
 }
 
 .nav {
-  background-color: rgb(236,76,138);
+  background-color: rgb(236, 76, 138);
 }
 
 .home-item img {
@@ -45,16 +43,16 @@
   height: calc(100vh - 24px);
 }
 
+.det-items {
+  padding: 0 2%;
+}
+
 .det-items:nth-child(odd) {
-  background-color: rgb(242,77,143);
+  background-color: rgb(242, 77, 143);
 }
 
 .det-items:nth-child(even) {
-  background-color: rgb(223,71,130);
-}
-
-.det-items {
-  padding: 0 2%;
+  background-color: rgb(223, 71, 130);
 }
 
 .det-items img {
@@ -67,6 +65,3 @@
   padding: 1% 7%;
   border-radius: 10%;
 }
-
-
-
