@@ -144,4 +144,31 @@
   .coin:nth-child(even) {
     animation: recolor 10s infinite;
   }
+
+  .det-container{
+    max-width: 75%;
+    margin-top: 4%;
+    height: auto;
+    padding: 0;
+    border: 2px solid rgb(223, 71, 130);
+  }
+
+  .det-items:nth-child(1) {
+    flex-direction: column-reverse;
+    background-color: white;
+    padding: 0;
+  }
+
+  .det-items:nth-child(2) {
+    margin: 5% 0;
+  }
+
+  .det-items:nth-child(1) span {
+    width: 100%;
+    background-color: rgb(242, 77, 143);
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  
 }
