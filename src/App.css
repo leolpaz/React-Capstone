@@ -9,14 +9,20 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: calc(100vh - 24px);
+  max-height: calc(100vh - 48px);
   padding: 0;
+  background-color: rgb(177, 43, 94);
 }
 
 .coin {
   margin: 0;
   padding-right: 2%;
 }
+
+.home-cont {
+  height: calc(100vh - 24px);
+}
+
 
 .coin:nth-child(4n-1),
 .coin:nth-child(4n-2) {
@@ -29,8 +35,32 @@
   background-color: rgb(177, 43, 94);
 }
 
+.home-cont,
+.input,
 .nav {
   background-color: rgb(236, 76, 138);
+}
+
+.input,
+.input:focus {
+  border: none;
+  outline: none;
+  max-width: 900px;
+}
+
+.input {
+  margin: auto;
+}
+
+.input,
+.input::placeholder {
+  color: white;
+}
+
+.home-item,
+.coin {
+  max-height: 200px;
+  min-height: 150px;
 }
 
 .home-item img {

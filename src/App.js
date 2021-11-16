@@ -25,7 +25,8 @@ import Details from './Details';
 import Nav from './Nav';
 
 const App = () => {
-  const reduxList = useSelector((state) => state.coinsReducer);
+  const reduxList = useSelector((state) => state.coinsReducer.initialList);
+  console.log(reduxList)
   const coinList = [
     {
       name: 'BTC',

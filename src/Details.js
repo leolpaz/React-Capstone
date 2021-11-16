@@ -11,7 +11,10 @@ const Details = (props) => {
         <img src={image} alt="" />
         <span>
           <p className="fs-4">{coin}</p>
-          <p className="fs-4">{price}</p>
+          <p className="fs-4">
+            $
+            {price}
+          </p>
         </span>
       </div>
       <div className="fs-1 det-items d-flex flex-column align-items-center justify-content-center">

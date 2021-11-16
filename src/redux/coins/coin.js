@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const GET_COINS = 'cryptowatcher/coin/GET-COINS';
+const FILTER_ARRAY = 'cryptowatcher/coin/FILTER_ARRAY';
 const API_URL = 'https://coinlib.io/api/v1';
 const END_POINT = '/coin?key=4cc278a547aafd46&symbol=';
 
-const initialState = [];
+const initialState = {initialList: [], filteredList: []};
 
 export const fetchData = (ticker, image) => async (dispatch) => {
   axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
@@ -25,7 +26,7 @@ export const fetchData = (ticker, image) => async (dispatch) => {
       payload,
     });
   } else {
-    const { data } = response;
+    const data = response.data
     const payload = {
       name: data.name,
       symbol: data.symbol,
@@ -35,6 +36,7 @@ export const fetchData = (ticker, image) => async (dispatch) => {
       dTwentyFour: (Math.round((data.delta_24h * 100)) / 100).toString(),
       image,
     };
+    console.log(payload)
     dispatch({
       type: GET_COINS,
       payload,
@@ -42,10 +44,17 @@ export const fetchData = (ticker, image) => async (dispatch) => {
   }
 };
 
+export const filterList = (payload) =>( {
+  type: FILTER_ARRAY,
+  payload
+})
+
 const coinsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COINS:
-      return [...state, action.payload];
+      return {...state, initialList: [...state.initialList, action.payload], filteredList: [...state.filteredList, action.payload]};
+    case FILTER_ARRAY:
+      return {...state, initialList: [...state.initialList], filteredList: action.payload};      
     default:
       return state;
   }
