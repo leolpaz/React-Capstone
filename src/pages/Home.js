@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-
-import {
-  Link,
-} from 'react-router-dom';
-import { fetchData, filterList } from './redux/coins/coin';
+import Item from '../components/Item';
+import { fetchData, filterList } from '../redux/coins/coin';
 
 const Home = (props) => {
   const { list } = props;
@@ -37,19 +33,13 @@ const Home = (props) => {
       <input onChange={filterItems} className="w-100 input" type="text" name="" id="" placeholder="Type here to filter" />
       <div className="grid">
         {coinList.map((el) => (
-          <Link key={el.name + el.symbol} className="coin" to={`/${el.symbol}`}>
-            <div className="h-100 d-flex flex-column justify-content-center align-items-end home-item">
-              <AiOutlineArrowRight />
-              <img src={el.image} alt="" />
-              <h3>
-                {el.name}
-              </h3>
-              <span>
-                $
-                {el.price}
-              </span>
-            </div>
-          </Link>
+          <Item
+            key={el.name + el.price}
+            name={el.name}
+            price={el.price}
+            symbol={el.symbol}
+            image={el.image}
+          />
         ))}
       </div>
     </div>

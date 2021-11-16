@@ -6,23 +6,23 @@ import {
   Navigate,
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import './App.css';
-import btcLogo from './assets/Cjdowner-Cryptocurrency-Bitcoin.svg';
-import bnbLogo from './assets/Cjdowner-Cryptocurrency-Binance-Coin.svg';
-import ethLogo from './assets/Cjdowner-Cryptocurrency-Ethereum.svg';
-import usdtLogo from './assets/Cjdowner-Cryptocurrency-Tether.svg';
-import adaLogo from './assets/Cjdowner-Cryptocurrency-Cardano.svg';
-import xrpLogo from './assets/Cjdowner-Cryptocurrency-Flat-Ripple-XRP.svg';
-import linkLogo from './assets/Cjdowner-Cryptocurrency-ChainLink.svg';
-import dogeLogo from './assets/Cjdowner-Cryptocurrency-Dogecoin.svg';
-import xlmLogo from './assets/Cjdowner-Cryptocurrency-Stellar.svg';
-import ltcLogo from './assets/Cjdowner-Cryptocurrency-Litecoin.svg';
+import '../assets/App.css';
+import btcLogo from '../assets/Cjdowner-Cryptocurrency-Bitcoin.svg';
+import bnbLogo from '../assets/Cjdowner-Cryptocurrency-Binance-Coin.svg';
+import ethLogo from '../assets/Cjdowner-Cryptocurrency-Ethereum.svg';
+import usdtLogo from '../assets/Cjdowner-Cryptocurrency-Tether.svg';
+import adaLogo from '../assets/Cjdowner-Cryptocurrency-Cardano.svg';
+import xrpLogo from '../assets/Cjdowner-Cryptocurrency-Flat-Ripple-XRP.svg';
+import linkLogo from '../assets/Cjdowner-Cryptocurrency-ChainLink.svg';
+import dogeLogo from '../assets/Cjdowner-Cryptocurrency-Dogecoin.svg';
+import xlmLogo from '../assets/Cjdowner-Cryptocurrency-Stellar.svg';
+import ltcLogo from '../assets/Cjdowner-Cryptocurrency-Litecoin.svg';
 
 // Components
 
-import Home from './Home';
-import Details from './Details';
-import Nav from './Nav';
+import Home from '../pages/Home';
+import Details from '../pages/Details';
+import Nav from '../components/Nav';
 
 const App = () => {
   const reduxList = useSelector((state) => state.coinsReducer.initialList);

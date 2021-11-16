@@ -14,10 +14,10 @@ export const fetchData = (ticker, image) => async (dispatch) => {
   if (error === true) {
     const payload = {
       name: 'Unable to load try refreshing the page',
-      price: 'Unable to load try',
-      hTwentyFour: 'Unable to load try',
-      lTwentyFour: 'Unable to load try',
-      dTwentyFour: 'Unable to load try',
+      price: 'Unable to load',
+      hTwentyFour: 'Unable to load',
+      lTwentyFour: 'Unable to load',
+      dTwentyFour: 'Unable to load',
       image,
       symbol: 'Unable to load',
     };
