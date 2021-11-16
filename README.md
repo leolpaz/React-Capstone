@@ -16,6 +16,9 @@
 - Jest
 - Reacting Test Library
 
+## Live Page
+
+[Live Page](https://leolpaz-react-capstone.netlify.app/)
 
 ## Getting Started
 
