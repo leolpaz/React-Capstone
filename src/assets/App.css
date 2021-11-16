@@ -21,7 +21,7 @@
 }
 
 .nav {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
 }
 
 .coin {
@@ -103,20 +103,22 @@
     margin-top: 2%;
     border: 1px solid rgb(122, 4, 50);
   }
+
   .input,
-  .input:focus
-  {
+  .input:focus {
     max-width: 100%;
     margin-top: 4%;
     margin-bottom: 4%;
     text-align: center;
     background-color: rgb(177, 43, 94);
   }
+
   .home-cont {
     max-width: 95%;
     height: 80vh;
     background-color: white;
   }
+
   .grid {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -125,27 +127,30 @@
     gap: 5%;
     background-color: white;
   }
+
   @keyframes recolor {
     0% {
       background: rgb(214, 69, 126);
     }
+
     50% {
       background: rgb(110, 16, 52);
     }
+
     100% {
       background: rgb(214, 69, 126);
     }
   }
 
   .coin:nth-child(odd) {
-   animation: recolor 10s infinite;
+    animation: recolor 10s infinite;
   }
 
   .coin:nth-child(even) {
     animation: recolor 10s infinite;
   }
 
-  .det-container{
+  .det-container {
     max-width: 75%;
     margin-top: 4%;
     height: auto;
@@ -169,6 +174,4 @@
     text-align: center;
     margin-bottom: 5%;
   }
-
-  
 }
