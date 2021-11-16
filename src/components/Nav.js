@@ -20,7 +20,7 @@ const Nav = () => {
 
   return (
     <div className="nav d-flex justify-content-between">
-      <Link to="./"><AiOutlineArrowLeft /></Link>
+      <Link data-testid="back-arrow" to="./"><AiOutlineArrowLeft /></Link>
       <span>{findPath()}</span>
       <span><AiFillSetting /></span>
     </div>
