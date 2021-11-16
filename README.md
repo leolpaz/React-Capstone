@@ -20,6 +20,10 @@
 
 [Live Page](https://leolpaz-react-capstone.netlify.app/)
 
+## Demo Video
+
+[Video](https://drive.google.com/file/d/1qk3917-XSa0npW9rZGZ7LJPiSnnEVueL/view)
+
 ## Getting Started
 
 
